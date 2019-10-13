@@ -1,20 +1,22 @@
-# Install virtual env
+# Django framework
+
+### Install virtual env
 $~ python3.6 -m venv --without-pip virtual
 $~ source virtual/bin/activate
 
-# Install pip
+### Install pip
 $~ curl https://bootstrap.pypa.io/get-pip.py | python
 
-# Install django
+### Install django
 (v)$~ pip install Django==2.2.6
 
-# Confirm Django is installed
+### Confirm Django is installed
 (v)$~ python3.6
     >>> import django
     >>> django.get_version()
     '2.2.6'
 
-# Create a Django project
+### Create a Django project
 (v)$~ django-admin startproject prjname
             prjname/
                 manage.py
@@ -23,9 +25,9 @@ $~ curl https://bootstrap.pypa.io/get-pip.py | python
                     settings.py
                     urls.py
                     wsgi.py
-#  or
+###  or
 (v)$~ django-admin startproject prjname
-# best for deployment
+### best for deployment
             manage.py
             prjname/
                 __init__.py
@@ -33,10 +35,10 @@ $~ curl https://bootstrap.pypa.io/get-pip.py | python
                 urls.py
                 wsgi.py
 
-# Start Django Server
+### Start Django Server
 (v)$~ python3.6 manage.py runserver
 
-# django apps
+### django apps
 (v)$~ django-admin startapp appname
             manage.py
             prjname/
@@ -50,10 +52,10 @@ $~ curl https://bootstrap.pypa.io/get-pip.py | python
                 tests.py
                 views.py
 
-# django bootstrap
+### django bootstrap
 (v)$~ pip install django-bootstrap3
 
-# Connecting To Postgres
+### Connecting To Postgres
     # Install database dependency
     (v)$~ pip install psycopg2
     # Create a Postgres database for our project
@@ -70,24 +72,24 @@ $~ curl https://bootstrap.pypa.io/get-pip.py | python
                 }
             }
 
-# Setting the Timezone
+### Setting the Timezone
     # prjname/settings.py
         TIME_ZONE = 'Africa/Nairobi'
 
-# Initial Migration
+### Initial Migration
 (v)$~ python3.6 manage.py migrate
 
-# Run Checks
+### Run Checks
 (v)$~ python3.6 manage.py check
     ~System check identified no issues (0 silenced)
-# Make Migrations
+### Make Migrations
 (v)$~ python manage.py makemigrations appname
-# View Migration
+### View Migration
 (v)$~ python3.6 manage.py sqlmigrate news 0001
-# Run Migration
+### Run Migration
 (v)$~ python3.6 manage.py migrate
 
-# Basic Database Queries
+### Basic Database Queries
 (v)$~ python manage.py shell (
     >>> from appname.models import Editor
     >>> ed1 = Editor(first_name = 'Fname',last_name = 'Lname',email ='example@example.com')
@@ -104,16 +106,16 @@ $~ curl https://bootstrap.pypa.io/get-pip.py | python
     >>> Editor.objects.filter(id = 2).delete()
     >>> Editor.objects.filter(id = 6)
     ))
-# Testing methods
+### Testing methods
 (v)$~ python manage.py test news
 
-# django app admin
+### django app admin
 (v)$~ python manage.py createsuperuser
 
-# Uploading images
+### Uploading images
 (v)$~ pip install pillow
 
-# Sending email
+### Sending email
 (v)$~ pip install python-decouple
         .env {
             EMAIL_USE_TLS = True
@@ -131,10 +133,10 @@ $~ curl https://bootstrap.pypa.io/get-pip.py | python
             EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
         }
 
-# Django Authentication
+### Django Authentication
 (v)$~ pip install django-registration==2.4.1
 
-# Creating an Editor for users
+### Creating an Editor for users
 (v)$~ pip install django-tinymce
 
 
