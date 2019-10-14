@@ -25,19 +25,22 @@
             background-color: rgba(255, 255, 255, 0.678);
             border-radius: 20px;
         }
+
         #dropdownMenuButton {
             border-radius: 100px;
             background-color: rgba(37, 37, 37, 0.678);
         }
+
         #alt {
             border-radius: 20px;
             background-color: rgba(95, 95, 95, 0.678);
             color: rgb(255, 252, 248);
         }
+
         html {
             height: 40rem;
         }
-        
+
         p {
             border-radius: 15px;
         }
@@ -53,8 +56,10 @@
                         Install virtual env
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">$~ python3.6 -m venv --without-pip virtual</p>
-                        <p class="dropdown-item">$~ source virtual/bin/activate</p>
+                        <p class="dropdown-item" id="p1">$~ python3.6 -m venv --without-pip virtual</p>
+                        <p class="dropdown-item" id="p2">$~ source virtual/bin/activate</p>
+                        <button onclick="copyToClipboard('#p1')">Copy-1</button>
+                        <button onclick="copyToClipboard('#p2')">Copy-2</button>
                     </div>
                 </div>
                 <br>
@@ -64,7 +69,8 @@
                         Install pip
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">$~ curl https://bootstrap.pypa.io/get-pip.py | python</p>
+                        <p class="dropdown-item" id="pp">$~ curl https://bootstrap.pypa.io/get-pip.py | python</p>
+                        <button onclick="copyToClipboard('#pp')">Copy</button>
                     </div>
                 </div>
                 <hr>
@@ -74,7 +80,8 @@
                         Install flask
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">pip install flask</a>
+                        <p class="dropdown-item" id="p">(v)$~ pip install flask</p>
+                        <button onclick="copyToClipboard('#p')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -84,7 +91,8 @@
                         Install flask bootstrap
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-bootstra</p>
+                        <p class="dropdown-item" id="pd">(v)$~ pip install flask-bootstra</p>
+                        <button onclick="copyToClipboard('#pd')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -94,7 +102,8 @@
                         Install flask wtf
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-wtf</p>
+                        <p class="dropdown-item" id="ppp">(v)$~ pip install flask-wtf</p>
+                        <button onclick="copyToClipboard('#ppp')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -104,7 +113,8 @@
                         Running app ??
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-script</p>
+                        <p class="dropdown-item" id="po">(v)$~ pip install flask-script</p>
+                        <button onclick="copyToClipboard('#po')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -114,7 +124,8 @@
                         Run start.sh
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ chmod a+x start.sh</p>
+                        <p class="dropdown-item" id="io">(v)$~ chmod a+x start.sh</p>
+                        <button onclick="copyToClipboard('#io')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -124,7 +135,8 @@
                         Install gunicorn
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ python3.6 -m pip install gunicorn</p>
+                        <p class="dropdown-item" id="co">(v)$~ python3.6 -m pip install gunicorn</p>
+                        <button onclick="copyToClipboard('#co')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -134,7 +146,8 @@
                         Get requirements file
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip freeze > requirements.txt</p>
+                        <p class="dropdown-item" id="hh">(v)$~ pip freeze > requirements.txt</p>
+                        <button onclick="copyToClipboard('#hh')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -144,8 +157,10 @@
                         flask sqlAlchemy
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-SQLAlchemy</p>
-                        <p class="dropdown-item">(v)$~ pip install psycopg2</p>
+                        <p class="dropdown-item" id="jj">(v)$~ pip install flask-SQLAlchemy</p>
+                        <p class="dropdown-item" id="ll">(v)$~ pip install psycopg2</p>
+                        <button onclick="copyToClipboard('#jj')">Copy-1</button>
+                        <button onclick="copyToClipboard('#ll')">Copy-2</button>
                     </div>
                 </div>
                 <br>
@@ -155,7 +170,8 @@
                         flask db migrations
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-migrate</p>
+                        <p class="dropdown-item" id="uu">(v)$~ pip install flask-migrate</p>
+                        <button onclick="copyToClipboard('#uu')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -165,9 +181,12 @@
                         Create flask migration folder(init)
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ python3.6 manage.py db init</p>
-                        <p class="dropdown-item">(v)$~ python3.6 manage.py db migrate -m</p>
-                        <p class="dropdown-item">(v)$~ python3.6 manage.py db upgrade</p>
+                        <p class="dropdown-item" id="yu">(v)$~ python3.6 manage.py db init</p>
+                        <p class="dropdown-item" id="ii">(v)$~ python3.6 manage.py db migrate -m</p>
+                        <p class="dropdown-item" id="ee">(v)$~ python3.6 manage.py db upgrade</p>
+                        <button onclick="copyToClipboard('#yu')">Copy-1</button>
+                        <button onclick="copyToClipboard('#ii')">Copy-2</button>
+                        <button onclick="copyToClipboard('#ee')">Copy-3</button>
                     </div>
                 </div>
                 <br>
@@ -177,7 +196,8 @@
                         flask login
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-login</p>
+                        <p class="dropdown-item" id="tt">(v)$~ pip install flask-login</p>
+                        <button onclick="copyToClipboard('#tt')">Copy</button>
                     </div>
                 </div>
                 <br>
@@ -187,7 +207,8 @@
                         flask uploads
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-uploads</p>
+                        <p class="dropdown-item" id="ww">(v)$~ pip install flask-uploads</p>
+                        <button onclick="copyToClipboard('#ww')">Copy-1</button>
                     </div>
                 </div>
                 <br>
@@ -197,7 +218,8 @@
                         flask emails
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item">(v)$~ pip install flask-mail</p>
+                        <p class="dropdown-item" id="qq">(v)$~ pip install flask-mail</p>
+                        <button onclick="copyToClipboard('#qq')">Copy-1</button>
                     </div>
                 </div>
                 <br>
@@ -209,6 +231,16 @@
             </div>
         </center>
     </div>
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
