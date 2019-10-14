@@ -1,46 +1,89 @@
-<!--Contact: 0719569050-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Python framework installaions' guide</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="./css/styles.css" rel="stylesheet" type="text/css">
-    <link href="./img/link.png" rel="icon">
+    <link href="./img/python.ico" rel="icon">
 </head>
 
-<body>
-    <center>
-        <img src="./img/p1.jpg" class="top">
-    </center>
-    <hr width="50%" />
-    <div class="card" id="left" style="width: 18rem;">
-        <img src="./img/flask.png" class="card-img-top" alt="flask-img">
-        <div class="card-body">
-            <h5 class="card-title" id="fl">Flask</h5>
-            <p class="card-text" id="flask">This are python Flask framework instructions for creating its project from
-                virtual environment to emails.</p>
-            <a href="./flask.md" class="btn btn-primary">See file</a>
-        </div>
+<body class="body">
+    <style>
+        .imgs:hover img {
+            transform: scale(1.5);
+        }
+
+        .imgs img {
+            transition: all 2.5s ease;
+        }
+
+        .imgs {
+            overflow: hidden;
+        }
+
+        @media (max-width: 400px) {
+            .body {
+                background-size: cover;
+                height: 39.9rem;
+            }
+        }
+
+        .body {
+            background: url(./img/keyboard.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 39.9rem;
+        }
+    </style>
+    <div>
+        <center>
+            <img src="./img/python.ico" class="top">
+        </center>
+        <center>
+            <div class="cards" style="width: 50rem;">
+                <div class="card" id="left" style="width: 18rem;background-color: rgb(210, 244, 255);">
+                    <div class="imgs">
+                        <img src="./img/flask2.png" class="card-img-top" alt="flask-img">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="fl">Flask</h5>
+                        <p class="card-text" id="flask">This are python Flask framework instructions for creating its
+                            project
+                            from
+                            virtual env to email.</p>
+                        <a href="./flask.md" class="btn btn-primary">See file</a>
+                    </div>
+                </div>
+                <div class="card" id="right" style="width: 18rem;background-color: rgb(210, 244, 255);">
+                    <div class="imgs">
+                        <img src="./img/django.jpg" class="card-img-top" alt="django-img">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="dj">Django</h5>
+                        <p class="card-text" id="django">This are python Django framework instructions for creating its
+                            project
+                            from
+                            virtual env to deployment.</p>
+                        <a href="./django.md" class="btn btn-primary">See file</a>
+                    </div>
+                </div>
+            </div>
+        </center>
     </div>
-    <div class="card" id="right" style="width: 18rem;">
-        <img src="./img/django.jpg" class="card-img-top" alt="django-img">
-        <div class="card-body">
-            <h5 class="card-title" id="dj">Django</h5>
-            <p class="card-text" id="django">This are python Django framework instructions for creating its project from
-                virtual environment to creating an editor for user.</p>
-            <a href="./django.md" class="btn btn-primary">See file</a>
-        </div>
-    </div>
-    <hr width="50%" />
-    <pre>
-        <sub>*</sub><strong id="ps">PS</strong>:You can email me at;
-        <address>danmark.chemuren@gmail.com</address>
-    </pre>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

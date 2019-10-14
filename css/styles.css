@@ -1,0 +1,16 @@
+html {
+    background: url(./img/keyboard.jpg);
+}
+#left {
+    float: left;
+}
+#right {
+    float: right;
+}
+.top {
+    border-radius: 200px;
+}
+
+
+
+
