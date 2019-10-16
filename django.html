@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python django framework installaions' guide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./img/python.ico" rel="icon">
+</head>
+
+<body>
+    <style>
+        .spp {
+            padding-left: 60px;
+        }
+
+        .dd {
+            -webkit-animation: colorchange 20s infinite alternate;
+        }
+
+
+        @-webkit-keyframes colorchange {
+            0% {
+                color: rgb(104, 104, 255);
+            }
+
+            10% {
+                color: #d574ff;
+            }
+
+            20% {
+                color: #77ffe4;
+            }
+
+            30% {
+                color: #ffb17d;
+            }
+
+            40% {
+                color: rgb(153, 153, 153);
+            }
+
+            50% {
+                color: #32fff5;
+            }
+
+            60% {
+
+                color: rgb(255, 116, 209);
+            }
+
+            70% {
+                color: #3ab0ff;
+            }
+
+            80% {
+                color: #ffe57e;
+            }
+
+            90% {
+
+                color: #ff6e7a;
+            }
+
+            100% {
+                color: rgb(171, 255, 145);
+            }
+        }
+
+        .fl {
+            float: left;
+            color: beige;
+        }
+
+        .sp {
+            border-radius: 20px;
+        }
+
+        .cont1 {
+            background: url(./img/keyboard.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .cont2 {
+            width: 450px;
+            background-color: rgba(255, 255, 255, 0.678);
+            border-radius: 20px;
+        }
+
+        .cc {
+            padding-right: 30px;
+            align-items: center;
+        }
+
+        #dropdownMenuButton {
+            border-radius: 100px;
+            background-color: rgba(37, 37, 37, 0.541);
+        }
+
+        .comm {
+            font-style: italic;
+            color: rgba(68, 68, 68, 0.603);
+        }
+        #alt {
+            border-radius: 20px;
+            background-color: rgba(95, 95, 95, 0.678);
+            color: rgb(255, 252, 248);
+        }
+    </style>
+    <div class="cont1">
+        <pre class="fl">
+                    <d class="dd">*PS</d><i class="dd">: After copying the commands
+                         don't forget to delete 
+                         " (v)$~ " or " $~ ".</i>
+                </pre>
+        <center>
+            <br>
+            <div class="cont2">
+                <img src="./img/django1.jpg" width="150px" height="150px">
+                <br>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Install virtual env
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="op">$~ python3.6 -m venv --without-pip virtual</p>
+                        <p class="dropdown-item" id="o9">$~ source virtual/bin/activate</p>
+                        <center>
+                            <button onclick="copyToClipboard('#op')" class="sp">Copy-1</button>
+                            <button onclick="copyToClipboard('#o9')" class="sp">Copy-2</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Install pip
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="ll">$~ curl https://bootstrap.pypa.io/get-pip.py | python</p>
+                        <center>
+                            <button onclick="copyToClipboard('#ll')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Install django
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="m">(v)$~ pip install Django==2.2.6</p>
+                        <center>
+                            <button onclick="copyToClipboard('#m')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Confirm Django is installed
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="u">(v)$~ python3.6</p>
+                        <pre class="cc">
+                        >>> import django
+                        >>> django.get_version()
+                        '2.2.6'
+                        </pre>
+                        <center>
+                            <button onclick="copyToClipboard('#u')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Create a Django project
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="i">(v)$~ django-admin startproject projectname</p>
+                        <i class="comm"># A quick display in directory.</i>
+                        <pre class="cc">
+                        projectname/
+                            manage.py
+                        projectname/
+                            __init__.py
+                            settings.py
+                            urls.py
+                            wsgi.py
+                        </pre>
+                        <center><i> or 👇</i> </center>
+                        <p class="dropdown-item" id="r">(v)$~ django-admin startproject projectname</p>
+                        <i class="comm"> # best way for deployment.</i>
+                        <pre class="cc">
+                        manage.py
+                        prjname/
+                            __init__.py
+                            settings.py
+                            urls.py
+                            wsgi.py
+                        </pre>
+                        <center>
+                            <button onclick="copyToClipboard('#i')" class="sp">Copy-1</button>
+                            <button onclick="copyToClipboard('#r')" class="sp">Copy-2</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Start Django Server
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="k">(v)$~ python3.6 manage.py runserver</p>
+                        <center>
+                            <button onclick="copyToClipboard('#k')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Create django apps
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="w">(v)$~ django-admin startapp appname</p>
+                        <i class="comm"># A quick display in directory.</i>
+                        <pre>
+                                manage.py
+                                prjname/
+                                    <i class="comm"># Contains project files</i>
+                                appname/
+                                    __init__.py
+                                    admin.py
+                                migrations/
+                                    __init__.py
+                                    models.py
+                                    tests.py
+                                    views.py
+                                    
+                            </pre>
+                        <center>
+                            <button onclick="copyToClipboard('#w')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Django bootstrap
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="n">(v)$~ pip install django-bootstrap3</p>
+                        <center>
+                            <button onclick="copyToClipboard('#n')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Connecting To Postgres
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <i class="comm"># To install database dependency</i>
+                        <p class="dropdown-item" id="iop">(v)$~ pip install psycopg2</p>
+                        <center><i> 👇 </i> </center>
+                        <i class="comm"># Create a Postgres database for our project</i>
+                        <p class="dropdown-item" id="qwe">(v)$~ psql</p>
+                        <center><i> 👇 </i> </center>
+                        <i class="comm"># This is to create database in psql</i>
+                        <p class="dropdown-item" id="zx">user=# CREATE DATABASE projectname;</p>
+                        <center><i> 👇 </i> </center>
+                        <i class="comm"># Change project database settings to use Postgres</i>
+                        <pre>
+                        <i>projectname/settings.py</i>
+                        DATABASES = {
+                            'default': {
+                                'ENGINE': 'django.db.backends.postgresql',
+                                'NAME': 'projectname',
+                                'USER': '<Your Database Username>',
+                                    'PASSWORD':'<Your Database Password>',
+                                        }
+                                    }
+                        </pre>
+                        <center><i> 👇 </i> </center>
+                        <i class="comm"># Setting the Timezone</i>
+                        <pre>
+                        <i>prjname/settings.py</i>
+                        TIME_ZONE = 'Africa/Nairobi'
+                        </pre>
+                        <center>
+                            <button onclick="copyToClipboard('#iop')" class="sp">Copy-1</button>
+                            <button onclick="copyToClipboard('#qwe')" class="sp">Copy-2</button>
+                            <button onclick="copyToClipboard('#zx')" class="sp">Copy-3</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Initial Migration
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="kl">(v)$~ python3.6 manage.py migrate</p>
+                        <center>
+                            <button onclick="copyToClipboard('#kl')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Run Checks
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nm">(v)$~ python3.6 manage.py check</p>
+                        <pre>~System check identified no issues (0 silenced)</pre>
+                        <center>
+                            <button onclick="copyToClipboard('#nm')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Make Migrations
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nb">(v)$~ python manage.py makemigrations appname</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nb')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        View Migrations
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="n1">(v)$~ python3.6 manage.py sqlmigrate news 0001</p>
+                        <center>
+                            <button onclick="copyToClipboard('#n1')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Run Migration
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nb1">(v)$~ python3.6 manage.py migrate</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nb1')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Basic Database Queries
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nb9">(v)$~ python manage.py shell</p>
+                        <i>This are database queries... 👇</i>
+                        <pre>
+                        {
+                        >>> from appname.models import Editor
+                        >>> ed1 = Editor(first_name = 'Fname',last_name = 'Lname',email ='example@example.com')
+                        >>> ed1.save()
+                        >>> ed2 = Editor.objects.create(first_name = 'Fname2',last_name = 'Lname2',email ='example2@example2.com')
+                        >>> Editor.objects.all()
+                        >>> Editor.objects.get(pk = 1)
+                        >>> Editor.objects.filter(first_name = 'Fname')
+                        >>> Editor.objects.filter(first_name = 'Fname',last_name = 'Lname')
+                        >>> Editor.objects.order_by('first_name')
+                        >>> Editor.objects.all()[:]
+                        >>> Editor.objects.filter(id = 2).update(first_name ='Fname')
+                        >>> Editor.objects.filter(id = 2)
+                        >>> Editor.objects.filter(id = 2).delete()
+                        >>> Editor.objects.filter(id = 6)
+                        }
+                        </pre>
+                        <center>
+                            <button onclick="copyToClipboard('#nb9')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Testing methods
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nb8">(v)$~ python manage.py test news</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nb8')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Django app admin
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nb6">(v)$~ python manage.py createsuperuser</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nb6')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Uploading images
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nb2">(v)$~ pip install pillow</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nb2')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sending email
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nds">(v)$~ pip install python-decouple</p>
+                        <i class="comm"># hen add email settings in .env file and then add configs in app settings.</i>
+                        <center><i> 👇 </i> </center>
+                        <pre>
+                        .env {
+                            EMAIL_USE_TLS = True
+                            EMAIL_HOST = 'smtp.gmail.com'
+                            EMAIL_PORT = 587
+                            EMAIL_HOST_USER = 'EMAIL'
+                            EMAIL_HOST_PASSWORD = 'EMAIL-PASSWORD'
+                            }
+
+                        <i class="comm"># tribune/settings.py</i>
+                            {
+                            EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+                            EMAIL_HOST = config('EMAIL_HOST')
+                            EMAIL_PORT = config('EMAIL_PORT')
+                            EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+                            EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+                            }
+                        </pre>
+                        <center>
+                            <button onclick="copyToClipboard('#nds')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Django Authentication
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nvc">(v)$~ pip install django-registration==2.4.1</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nvc')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Creating an Editor for users
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="nvc">(v)$~ pip install django-tinymce</p>
+                        <center>
+                            <button onclick="copyToClipboard('#nvc')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Django heroku deployments
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" id="link">For django project heroku deployment checkout my <a
+                                href="https://github.com/Dnmrk4/django-heroku-deployments.git">github link.</a></p>
+                        <center>
+                            <button onclick="copyToClipboard('#link')" class="sp">Copy</button>
+                        </center>
+                    </div>
+                </div>
+                <br>
+                <div class="alert alert-info" role="alert" id="alt">
+                    To create an example of a portfolio using django framework you can visit this alternative <a
+                        href="https://www.jetbrains.com/help/pycharm/creating-flask-project.html"
+                        class="alert-link">link</a> to have a brief guide on how to build a project from scratch.
+                </div>
+                
+            </div>
+            <br>
+        </center>
+    </div>
+
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
