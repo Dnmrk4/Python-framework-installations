@@ -21,9 +21,95 @@
         .imgs img {
             transition: all 2.5s ease;
         }
-
-        .imgs {
+        .imgs{
             overflow: hidden;
+        }
+        .mmm {
+            margin-left: -30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            -moz-animation: bounce 2s infinite;
+            -o-animation: bounce 2s infinite;
+        }
+
+        @-webkit-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0);
+            }
+
+            40% {
+                -webkit-transform: translateY(-30px);
+            }
+
+            60% {
+                -webkit-transform: translateY(-15px);
+            }
+        }
+
+        @-moz-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -moz-transform: translateY(0);
+            }
+
+            40% {
+                -moz-transform: translateY(-30px);
+            }
+
+            60% {
+                -moz-transform: translateY(-15px);
+            }
+        }
+
+        @-o-keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -o-transform: translateY(0);
+            }
+
+            40% {
+                -o-transform: translateY(-30px);
+            }
+
+            60% {
+                -o-transform: translateY(-15px);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
         }
 
         @media (max-width: 400px) {
@@ -41,14 +127,15 @@
         }
     </style>
     <div>
-        <center>
+        <center class="mmm">
             <img src="./img/python.ico" class="top">
         </center>
         <center>
             <div class="cards" style="width: 50rem;">
                 <div class="card" id="left" style="width: 18rem;background-color: rgb(210, 244, 255);">
                     <div class="imgs">
-                        <img src="./img/flask2.png" class="card-img-top" alt="flask-img">
+                        <img src="./img/flask2.png" class="card-img-top" class="animated infinite bounce"
+                            alt="flask-img">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title" id="fl">Flask</h5>
